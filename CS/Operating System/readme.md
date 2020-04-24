@@ -3,9 +3,10 @@
 - Multi-level Feedback Queue  
   - Print Gantt-Chart & Table with Process number, Burst Time, Turnaround time, and Waiting time.  
   
-  - Under the assumption  
+  - Under the assumptions,  
   
     1. Three Scheduling queues exist  
+    
       - First Queue(Q0): RR scheduling with time-quantum 2  
       - Second Queue(Q1): RR scheduling with time-quantum 4  
       - Third Queue(Q2): FCFS scheduling  
@@ -21,4 +22,5 @@
     5. Scheduling on Higher Priority first  
     
     6. Uni-processor  
+    
 - `input.txt`: input data format that I supposed  
