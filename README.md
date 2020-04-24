@@ -1,4 +1,4 @@
-# data-weirdo practice
+# SKKU data-weirdo codes
 
 From April 24th, 2020  
 
