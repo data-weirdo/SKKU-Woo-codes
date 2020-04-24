@@ -1,4 +1,4 @@
-# MFQ  
+# MFQ.c  
 
 - Multi-level Feedback Queue  
   - Print Gantt-Chart & Table with Process number, Burst Time, Turnaround time, and Waiting time.  
