@@ -327,7 +327,7 @@ int main(void){
 	int cpu_time = 0; // 1초 단위로 매 iteration마다 증가	
 	int total = 0;
 
-	FILE *fp = fopen("C://Users//승우//Desktop//input2.txt","rt");
+	FILE *fp = fopen("/My Directory","rt");
 
 	if(fp==NULL){
 		printf("파일오픈 실패\n");
