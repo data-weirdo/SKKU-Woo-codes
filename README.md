@@ -12,7 +12,7 @@ Though much times are gone, I start to upload my stuffs on Github from now on. (
 ## Statistics  
 
 #### Statistical Simulation  
-- Random Number generation  
+- Random Number Generation  
 - Monte Carlo Simulation  
 
 #### Timeseries Analysis  
