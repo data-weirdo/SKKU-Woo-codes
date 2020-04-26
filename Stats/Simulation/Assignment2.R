@@ -1,37 +1,49 @@
 # 1
 
-pb1 <- function(gen){
+pb1 <- function(n, m){
   
-  z <- vector('numeric', gen)
+  random_number <- vector('numeric', m)
   
-  for (i in 1:gen){
-    x <- rexp(1, 2)
-    y <- rexp(1, 3)
+  for (i in 1:m){
     
-    z_element <- min(x,y)
+    min_collection <- vector('numeric', n)
     
-    z[i] = z_element
+    exp1 <- rexp(n, rate=2)
+    exp2 <- rexp(n, rate=3)
+    exp_group <- rbind(exp1, exp2)
+    min_exp <- apply(exp_group, 2, min)
+    
+    random_number[i] <- mean(min_exp)
+    
   }
-
-  return(z)
+  return (random_number)
 }
 
+mc_values <- pb1(10, 1000)
 
-mc_values <- pb1(10)
-sd(mc_values) # standard error of thete_hat
+sd(mc_values)
+hist(mc_values)
 
+# 95% Confidence Interval for asymetric case
 
-hist(mc_values) # This is absolutely not the symmetric one. 
-ci_candidate <- seq(0.001, 0.049, by=0.001)
-CI = NULL
-
-for (i in ci_candidate){
-  ci <- quantile(mc_values, probs = c(i, i+0.95))
-  CI <- rbind(CI, ci)
+shortest_ci <- function(simulated_data){
+  
+  alpha_seq <- seq(0.001, 0.049, 0.001)
+  ci <- NULL
+  
+  for (j in alpha_seq){
+    
+    ci_temp <- quantile(simulated_data, prob=c(j, (0.95+j)))
+    ci <- rbind(ci, ci_temp)
+  }
+  
+  len <- ci[,2]-ci[,1]
+  shortest <- ci[which.min(len),]
+  
+  return(shortest)
 }
 
-len <- CI[,2] - CI[,1]
-CI[which.min(CI[,2]-CI[,1]),]
+shortest_ci(mc_values)
 
   
 #########################################################
