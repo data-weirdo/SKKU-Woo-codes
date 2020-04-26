@@ -1,4 +1,4 @@
-# 1
+# 1 (Need to carefully grasp what the 'estimator' is for true parameter)
 
 pb1 <- function(n, m){
   
@@ -95,12 +95,16 @@ pb2(3, 50, 100)
 
 ################################################################
 
-# 3
+# 3 (Need to grasp what is 'constant' and what is 'random')
 
 pb3 <- function(gen, beta1){
   
   # gen: the number of beta1 values to generate
   # beta1: assumed beta1 
+  
+  x <- runif(30, 1, 10)
+  error_part <- 36 / x
+  w <- (1 / x)^(-1)
   
   beta1_for_ols <- vector('numeric', gen)
   beta1_for_wls <- vector('numeric', gen)
@@ -108,15 +112,11 @@ pb3 <- function(gen, beta1){
 
   for (i in 1:gen){
     
-    x <- runif(30, 1, 10)
-    error_part <- 36 / x
     y <- vector('numeric', 30)
     
     for (j in 1:30){ 
       y[j] <- 2 + 3*x[j] + rnorm(1, mean=0, sd=sqrt(error_part[j]))
     }
-
-    w <- (1 / x)^(-1) 
     
     lm.ols <- lm(y ~ 1 + x)
     lm.wls <- lm(y ~ 1 + x, weights=w)
@@ -126,15 +126,25 @@ pb3 <- function(gen, beta1){
     
   }  
   
+  # result <- data.frame(beta1_for_ols, beta1_for_wls)
+  
   MSE_for_ols <- mean((beta1_for_ols - beta1)^2)
   MSE_for_wls <- mean((beta1_for_wls - beta1)^2)
-  
-  result <- data.frame(MSE_for_ols, MSE_for_wls)
-  
+
+  result <- c(MSE_for_ols, MSE_for_wls)
+  names(result) <- c('MSE_for_OLS', 'MSE_for_WLS')
+
   return(result)
 
 }
 
-
-result <- pb3(100, 3)
+result <- pb3(1000, 3)
 result
+
+
+# boxplot(x=result[,1])
+# abline(h=3, col='red')
+# title('Beta1_for_OLS')
+# boxplot(x=result[,2])
+# abline(h=3, col='blue')
+# title('Beta1_for_WLS')
