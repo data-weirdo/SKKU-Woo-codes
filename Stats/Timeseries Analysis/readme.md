@@ -21,9 +21,13 @@
   3. Want to remove both?  
     - Polynomial Reg + Harmonic Reg  
     - Classical Decomposition  
-    - Differencing (Caution: Involves one order trend removal automatically  
+    - Differencing (Caution: Involves one order trend removal automatically)  
   ```  
   - As all the examples in code2 and code3 show the 'dependence structure',  
     need to consider other models like AR, MA, ARMA, ARIMA, SARIMA etc...  
     
 - Test of Randomness  
+
+## TS_Code5  
+- ARMA Model need 4 good properties: stationary, causal, invertibility, identifiability  
+- Theoretical ACF / PACF  
