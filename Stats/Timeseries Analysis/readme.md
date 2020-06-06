@@ -47,7 +47,7 @@
     1. See plots and Select
       - Plot the ACF / PACF of raw data  
       -> Choose a lot of possible selection that seems reasonable  
-      -> fit the arma model  
+      -> fit the arma modelS  
       -> test (diagnostics)
       -> Choose the most plausible model among models that looks reasonable in several tests. 
       
@@ -66,3 +66,32 @@
  
 - 'test' involves a lot of things: iid? normal? even coeffs=0 or not  
 - Do the `FORECAST`  
+
+## TS_Code7  
+- How to deal with non-homogeneous Time Series data?  
+  - Absolutely need to stabilize the variance (`VST`: Variance Stabilization Transformation)  
+  
+  ```  
+  1. Transform manually  
+  - Square root, Cube root, log, ...
+  
+  2. Use Box-Cox Transformation  
+  ```  
+  
+- Recommend to use log or sqrt, because sometimes Box-Cox transformation makes interpretation hard.  
+
+## TS_Code8  
+- SARIMA(p,d,q)X(P,D,Q) model  
+  - Temporal Component(→) + Seasonal Component(↓)  
+
+- The model that can remove trend and stationarity at once  
+- The model that can be considered after being failed to adapt simpler models.  
+
+  ```  
+  ※ Order selection of SARIMA model is not really different from ARIMA  
+  1. Draw plots, ACF / PACF ...  
+  2. Use Information Criteria ...  
+  ...  
+  ```  
+  
+  
