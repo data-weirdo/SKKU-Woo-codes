@@ -56,7 +56,7 @@
     2. Use information Criteria  
       - AIC / BIC / AICC(Improved version of AIC which can consinder the dependent structure in TS)  
       
-      functions to consider) auto.arima
+      functions to consider) auto.arima (Gives the best model in terms of BIC in default)
       
     3. Out-of-sample forcasting error   
    
