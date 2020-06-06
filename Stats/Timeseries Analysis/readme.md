@@ -31,3 +31,38 @@
 ## TS_Code5  
 - ARMA Model need 4 good properties: stationary, causal, invertibility, identifiability  
 - Theoretical ACF / PACF  
+
+## TS_Code6  
+- Order Selection of ARMA(p,q) model  
+
+  ```  
+  Summary  
+  - There might be a lot of methods to estimate the order of ARMA model.  
+    : 1. See plots and Select
+      2. Use information Criteria
+      3. Out-of=sample forcasting error 
+      4. Adaptive Lasso for AR model  
+      ...  
+      
+    1. See plots and Select
+      - Plot the ACF / PACF of raw data  
+      -> Choose a lot of possible selection that seems reasonable  
+      -> fit the arma model  
+      -> test (diagnostics)
+      -> Choose the most plausible model among models that looks reasonable in several tests. 
+      
+      functions to consider) arima, tsdiag(fitted_model), resid(fitted_model), test
+      
+    2. Use information Criteria  
+      - AIC / BIC / AICC(Improved version of AIC which can consinder the dependent structure in TS)  
+      
+      functions to consider) auto.arima
+      
+    3. Out-of-sample forcasting error   
+   
+    ...  
+    ```  
+- Of course, on the same order of ARMA(p,q), the result can be different among 1, 2, 3  
+ 
+- 'test' involves a lot of things: iid? normal? even coeffs=0 or not  
+- Do the `FORECAST`  
