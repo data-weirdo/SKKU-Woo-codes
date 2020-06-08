@@ -94,4 +94,10 @@
   ...  
   ```  
   
+## TS_Code9  
+- Of course, other than polynomial regression and harmonic regression,  
+  there are a lot of ways to fit and forecast the time series data.  
   
+- One of the other 'Regression' method: 'GLS'  
+  - GLS can consider the 'dependent' structure that OLS can't  
+  - 'Inference' is also possible in GLS  
