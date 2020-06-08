@@ -1,4 +1,4 @@
-# MFQ Algorithm.c  
+# MFQ Algorithm  
 
 - Multi-level Feedback Queue  
   - Print Gantt-Chart & Table with Process number, Burst Time, Turnaround time, and Waiting time.  
@@ -20,3 +20,14 @@
     ```  
     
 - `input.txt`: input data format that I supposed  
+
+---  
+
+# VM Management  
+
+- Virtual Management algorithm  
+  - MIN algorithm  
+  - FIFO algorithm  
+  - LFU algorithm  
+  - LRU algorithm  
+  - WS algorithm   
