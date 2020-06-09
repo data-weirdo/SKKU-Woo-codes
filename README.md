@@ -14,6 +14,11 @@ Though much times are gone, I start to upload my stuffs on Github from now on. (
 #### Statistical Simulation  
 - Random Number Generation  
 - Monte Carlo Simulation  
+- Bootstrap  
+- Poisson Process  
+- Queueing System  
+- Discrete Event Simulations  
+- Validation of Simulation Models    
 
 #### Timeseries Analysis  
 
