@@ -58,7 +58,7 @@ SSQ <- function(lambdaA, lambdaD, Time)
   A <- NULL
   D <- NULL
   
-  while (min(tA,tD) <= T || n > 0)
+  while (min(tA,tD) <= Time || n > 0)
   {
     if (tA <= tD && tA < Time)				# Case 1
     {
