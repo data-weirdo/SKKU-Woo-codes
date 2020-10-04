@@ -21,14 +21,20 @@ Though much times are gone, I start to upload my stuffs on Github from now on. (
 - Validation of Simulation Models    
 
 #### Timeseries Analysis  
-
+#### Non-parametric Statistics  
 ---  
 
 ## Computers  
 
 #### Data Structure  
-- Simple LInked List  
-- Double LInked List  
+- Simple Linked List  
+- Double Linked List  
+- Circular LInked List  
+- Heap  
+- Sorting1  
+- Sorting2  
+- Binary Search Tree  
 
 #### Operating System
 - MFQ algorithm  
+- Virtual Memory Management  
