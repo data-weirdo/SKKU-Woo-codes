@@ -21,7 +21,11 @@ Though much times are gone, I start to upload my stuffs on Github from now on. (
 - Validation of Simulation Models    
 
 #### Timeseries Analysis  
+- Refer Ststs/Timeseries Analysis/readme.md  
+
 #### Non-parametric Statistics  
+- 6 Simple question-answering assignments  
+
 ---  
 
 ## Computers  
