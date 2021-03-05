@@ -28,7 +28,7 @@ Though much times are gone, I start to upload my stuffs on Github from now on. (
 
 ---  
 
-## Computers  
+## CS  
 
 #### Data Structure  
 - Simple Linked List  
@@ -42,3 +42,4 @@ Though much times are gone, I start to upload my stuffs on Github from now on. (
 #### Operating System
 - MFQ algorithm  
 - Virtual Memory Management  
+
