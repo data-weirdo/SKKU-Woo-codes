@@ -1,4 +1,4 @@
-# SKKU Woo codes
+# Undergraduate codes
 
 From April 24th, 2020  
 
